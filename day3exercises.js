@@ -29,15 +29,17 @@
 //     var num3 = num1 + num2;
 //     console.log(num3)
 // // 8. Create a set of variables that define an animal (age, height, name, etc...). Must be atleast 6 variables.
-//     var animal = 'whale';
-//     var name = 'Willy';
-//     var age = 8;
-//     var length = '30ft';
-//     var wings = false;
-//     var blowhole = true;
+     var animal = 'whale';
+     var name = 'Willy';
+     var age = 8;
+     var length = '30ft';
+     var wings = false;
+     var blowhole = true;
 
-//     var sentence = `My animal is a ${animal}.
-//     console.log(sentence);
+     var sentence = `My animal is a ${animal}. His name is ${name}, he is ${age}, and ${length} long!`
+
+    console.log(sentence);
+
 
 
     // level 0
