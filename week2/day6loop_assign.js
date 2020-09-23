@@ -6,10 +6,10 @@
 //          - Hi!
 //          - Hi!
 // function greet(){
-//     for(i = 0; i < 5; i++ )
+//     for(i = 0; i <= 4; i++ )
 //     console.log('-Hi!')
 
-//     return  'Bye!';
+//     //return  'Bye!';
 // }
 // console.log(greet())
 // Q2: Create a loop which logs the index. Try and use a template literal to produce the result.
@@ -61,34 +61,37 @@
     // - Output: ['APple', 'BAnana', 'ORange', 'PEach', 'STrawberry', 'PLum'];
 // var fruits = ['Apple', 'Banana', 'Orange', 'Peach', 'Strawberry', 'Plum'];
 
-// function cap(){
+//  function cap(arr){
 //     var capLetter = [];
-//     for (i = 0; i < fruits.length; i++){
-        
-//         var secLetter = fruits[i][1].toUpperCase();
-//         capLetter.push(secLetter)
+//     for (var i = 0; i < arr.length; i++){
+//     var ele = arr[i];
+//     var secLetter = ele[1].toUpperCase();
+//     var worArr = ele.split('');
+//     worArr[1] = secLetter;
+//     var capitalized = worArr.join('');
+//     capLetter.push(capitalized);
 
-//     }
+//      }
 
 //     return capLetter;
-// }
-// console.log(cap());
+//  }
+//  console.log(cap(fruits));
 // Q6: Loop over an array of names and log the first and last initial of each person
     // - Input:    ['Shamika Earle', 'Ramsey Lewis', 'Samuel Pierre Louis', 'Wilson Pierre Louis' ]
     // - Output: ['SE', 'RL', 'SPL', 'WPL' ]
 
-var students = ['Shamika Earle', 'Ramsey Lewis', 'Samuel Pierre Louis', 'Wilson Pierre Louis' ]
+// var students = ['Shamika Earle', 'Ramsey Lewis', 'Samuel Pierre Louis', 'Wilson Pierre Louis' ]
 
-function initials(arr){
-    var newArr = [];
-    for (i = 0; i < arr.length; i++){
-        var ele = arr[i];
-        var first = ele[i].toUpperCase();
-        //var spaceIndex = students.indexOf(' ');
-        var capitalized = first;
-        newArr.push(capitalized);
+// function initials(arr){
+//     var newArr = [];
+//     for (var i = 0; i < arr.length; i++){
+//         var ele = arr[i];
+//         var first = ele[i].toUpperCase();
+//         //var spaceIndex = students.indexOf(' ');
+//         var capitalized = first;
+//         newArr.push(capitalized);
 
-        return newArr;
-    }
-}
-console.log(initials(students))
+//         return newArr;
+//     }
+// }
+// console.log(initials(students))
