@@ -18,7 +18,7 @@
                     console.log(basketball.item)
             // 2b: Write code that increases the number of players by one
             //basketball.players++
-            basketball.players = Number(basketball.players) + 1 // If passed in as a string
+            basketball.players = Number(basketball.players) + 1 // If passed in as a string converts to number
             console.log(basketball.players)
             
     // 0.3: Adding Stuff
