@@ -38,13 +38,18 @@ console.log('@' + person.email.split('@').pop())
             // hint there are 12 inches in a foot, you may want to convert the height into only inches
             //console.log((person.height.slice(0,-1)))
 
-            var davidBeckham = 71
-            var height = 71 
-                if ( height === davidBeck){
+            
+            function heightConvert(str){
+                let feet = Number.str.split("'")[0];
+                let inches = Number(str.split("'")[1].slice(0,-1));
+                console.log(feet, inches);
+                person.heightInInches = inches + (feet*12);
+            }
+                if ( person.heightInInches === 71 ){
                     console.log("Same height as Beckham" )
-                } else if ( height > davidBeck){
+                } else if ( height > 71){
                     console.log("Taller than Beckham")}
-                 else if (height < davidBeck){
+                 else if (height < 71){
                     console.log("Shorter than Beckham")
                  }
 
