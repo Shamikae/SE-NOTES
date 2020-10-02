@@ -106,4 +106,24 @@ function isDivisible(n, x, y) {
       const litres = time => Math.floor(time /2);
       //or 
       const litres = time => Math.floor(time * 0.5);
+//Vowel Count:
+    // Return the number (count) of vowels in the given string.
+    // We will consider a, e, i, o, u as vowels for this Kata (but not y).
+    // The input string will only consist of lower case letters and/or spaces.
 
+    function getCount(str) {
+        var vowelsCount = 0;
+        var vowels = 'aeiou';
+          for(var x = 0; x < str.length ; x++)
+        {
+          if (vowels.indexOf(str[x].toLowerCase()) !== -1)
+          {
+            vowelsCount += 1;
+          }
+        
+        }
+        
+        return vowelsCount;
+      }
+      
+      console.log(getCount("abracadabra"))

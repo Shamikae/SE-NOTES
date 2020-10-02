@@ -1,0 +1,59 @@
+body{
+    margin: 0px;
+    background-color: royalblue;
+
+    
+}
+
+.mainContainer{
+    /* Properties for mainContainer */
+    border: 1px solid black;
+    padding: 20px;
+    max-width: 1440px;
+   
+
+    /* Properties for stuff in mainContainer */
+    display: flex;
+    flex-direction: column;
+    /* Justify*/
+    justify-content: center;
+    align-items:  center;
+    padding: 48px;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+    color: rgb(248, 246, 252);
+}
+
+
+.col{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    /*style*/
+    padding: 10px;
+    background-color: #253237;
+    border-radius: 10px;
+    box-shadow: 2.5px 2.5px 8px 5px #888888;
+    transition: all .3s;
+}
+
+.card:hover{
+    box-shadow: 5px 5px 8px 8px #888888;
+
+}
+img{
+    width: 100%
+}
+
+button{
+    background-color: rgb(20, 82, 255);
+    border-radius: ;
+}

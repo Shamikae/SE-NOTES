@@ -1,0 +1,62 @@
+body{
+    margin: 0px;
+    background-color: white;
+    
+}
+.mainContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.covidBanner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    background-color: rgb(45, 43, 56);
+}
+
+a {
+    color: white;
+  }
+
+.headerContainer{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.menu{
+    font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #000;
+    -webkit-font-smoothing: antialiased;
+    font-size: 18px;
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+    letter-spacing: .1px;
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MCIgaGVpZ2h0PSI0NCI+PGcgZmlsbD0iIzY2NiI+PHBhdGggeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBkPSJNMCAwaDYwdjhIMFYwem0wIDBNMCAxOGg2MHY4SDB2LTh6bTAgME0wIDM2aDYwdjhIMHYtOHptMCAwIi8+PC9nPjwvc3ZnPg==);
+    cursor: pointer;
+    width: 40px;
+    height: 30px;
+    background-size: 40px 30px;
+    margin-top: 16px;
+}
+
+.logo{
+    height: 40px;
+    width: 100px;
+}
+
+.logo > img{
+    width: 100%;
+}
+
+#m-search-input-wrapper{
+    display: flex;
+}
+
