@@ -2,8 +2,21 @@ let canvas = document.getElementById("gameCanvas");
 let ctx = canvas.getContext("2d");
 
 let road = new Image;
-road.src = "Notes/Group 2.png";
+road.src = "/Users/shamikaearle/Desktop/Development/Nebula_Academy/Notes/projPractice/Group 2.png";
 let modifier = 5; 
+let obj1 = new Image;
+obj1.src = "/Users/shamikaearle/Desktop/Development/Nebula_Academy/Notes/projPractice/car.png"
+let obj2 = new Image;
+obj2.src = "/Users/shamikaearle/Desktop/Development/Nebula_Academy/Notes/projPractice/car1.png"
+let obj3 = new Image;
+obj3.src = "/Users/shamikaearle/Desktop/Development/Nebula_Academy/Notes/projPractice/car2.jpeg"
+let obj4 = new Image;
+obj4.src = "/Users/shamikaearle/Desktop/Development/Nebula_Academy/Notes/projPractice/goldDollar.png"
+
+var objArray = [obj1, obj2, obj3, obj4]
+
+console.log(objArray.ran)
+
 
 road.onload = () => {
         requestAnimationFrame(gameLoop);
@@ -19,7 +32,7 @@ function gameLoop(){
     ctx.drawImage(road, 0, yOffSet + 1024);
 
     yOffSet += 10;
-    ctx.drawImage(car, 490, 400);
+    // ctx.drawImage(car, 490, 400);
     requestAnimationFrame(gameLoop);
 }
 
