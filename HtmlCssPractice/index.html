@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Race Track</title>
+        <link rel="stylesheet" href="styles.css" />
+        
+        <!-- <style>
+        </style> -->
+    </head>
+    <body>
+        <canvas id="canvas" width="512" height="850"></canvas>
+        <div id="scoreboard">
+            <div class="inner-board">
+                <div class="fuel-meter meter-box">
+                    <div class="label">FUEL</div>
+                    <div class="fuel-level-container">
+                        <div class="fuel-level"></div>
+                    </div>
+                </div><!-- fuel-meter -->
+                <div class="time-meter meter-box">
+                    <div class="label">
+                        TIME LAPS:-
+                    </div>
+                    <div class="time">
+                        00:00:00
+                    </div>                    
+                </div><!-- time-meter -->
+                <div class="speedo-meter meter-box">
+                    <div class="speed">
+                        0
+                    </div>
+                    <div class="unit">
+                        KM/h
+                    </div>
+                </div><!-- speedo-meter -->
+                <div class="distance-meter meter-box">
+                    <div class="distance">
+                        10 KMs
+                    </div>
+                    <div class="label">
+                        LEFT
+                    </div>
+                </div><!-- distance-meter -->
+            </div>
+        </div>
+        <script src= scripts.js></script>
+    </body>
+</html> 
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>SPACE FORCE - VIRUS OF TITAN</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+       
+        <canvas id="myCanvas" width= '850' height='700'></canvas>
+        <div id= 'Parent'>
+            <div id ='startGame'><img src='./assets/titleScreen.png'/></div>
+            <div id="healthRed">  </div>
+            <div id="healthGreen">  </div>
+            <div  id="scoreBoard"></div>
+        </div>
+
+    </body>
+    <script src="script.js"></script>
+</html>
+
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+ <meta charset="UTF-8">
+ <title>timerDemo</title>
+ <script type="text/javascript"
+   src = "simpleGame.js"></script>
+ <script type="text/javascript">
+  var timer;
+  var output;
+  var game;
+  function init(){
+   game = new Scene();
+   output = document.getElementById("output");
+   timer = new Timer();
+   timer.reset();
+   game.start();
+  } // end init
+  function update(){
+   game.hide();
+   currentTime = timer.getElapsedTime();
+   output.innerHTML = currentTime;
+  } // end update
+  function reset(){
+   timer.reset();
+  } // end reset
+ </script>
+</head>
+<body onload = "init()">
+ <div id="output">empty</div>
+ <button onclick = "reset()">
+  reset timer
+ </button>
+</body>
+</html>
