@@ -1,0 +1,16 @@
+{
+  "name": "psql_frontend",
+  "version": "1.0.0",
+  "description": "## TASKS: * Create DB (students) * Create Table (students) * Add a few items (students) * Write a selector to retrieve info * Write Javascript utilizing the selector to log the info * Write Javascript tp display info on we page * Stretch Goal: CRUD?",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "pg": "^8.5.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
