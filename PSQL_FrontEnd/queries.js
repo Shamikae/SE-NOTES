@@ -1,5 +1,3 @@
-const { request, response } = require('express');
-
 const Pool = require('pg').Pool;
 const pool = new Pool({
     user: 'postgres',
@@ -35,12 +33,12 @@ const createStudent = (request, response) => {
     const { first_name, last_name} = request.body;
 
     pool.query('INSERT INTO students (first_name, last_name) VALUES ($1, $2) RETURNING *', [first_name, last_name], (error, results) => {
-    if (error){
-        throw error;
-    }
-    response.status(200).send(`Student added with first_name: ${first_name}, last_name: ${last_name}`);
-});
-
+        if (error){
+            throw error;
+        }
+        response.status(200).send(`Student added with first_name: ${first_name}, last_name: ${last_name}`);
+    });
+}
 module.exports = {
     getStudent,
     getStudentById,
