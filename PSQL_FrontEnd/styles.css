@@ -1,3 +1,52 @@
 .card {
-    height: ;
-}
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    
+
+  
+    height: 300px;
+    width: 250px;
+    box-shadow: 4px 4px 4px 8px;
+    padding: 10px;
+    background-size: cover;
+    margin: 20px;
+  }
+
+  #content{
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  /* .studentButtonContainer{
+
+  }
+
+  .button{
+      min-height: 30px;
+  } */
+
+  #singleView{
+      position: fixed;
+      top: 20%;
+      left: 20%;
+
+      display: none;
+      align-items: center;
+      flex-direction: column;
+
+      background-color: maroon;
+      width: 60%;
+      color: white;
+      border-radius: 10px;
+      box-shadow: 5px 5px 5px 10px;
+  }
+  #singleView img{
+      max-width: 500px ;
+  }
+
+  #closeButton{
+      position: absolute;
+      top: 10px;
+      right: 10px;
+  }

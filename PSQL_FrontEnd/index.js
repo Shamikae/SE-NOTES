@@ -18,11 +18,13 @@ app.use(
 
 app.get('/', (request, response) => {
     response.json({info: 'Node.js, Express, and Postgres API'})
-})
+});
 
 app.get('/students', db.getStudent);
 app.get('/students/:id', db.getStudentById);
-app.get('/students', db.createStudent);
+app.post('/students', db.addStudent);
+app.delete('/students/:id', db.deleteStudentById);
+app.put('/students/:id', db.updateStudentById);
 
 app.listen(port, () => {
     console.log(`App running on port ${port}🚀`)

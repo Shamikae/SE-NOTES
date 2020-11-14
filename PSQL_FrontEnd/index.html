@@ -9,15 +9,29 @@
 <body>
     <h1>My first Stack App</h1>
 
-    <input id="first_Name" placeholder="first_Name"  value=""/>
-    <input id="last_Name" placeholder="last_Name" value=""/>
-    <input id="major" placeholder="major" value=""/>
-    <input id="email" placeholder="email" value=""/>
+    <p>To add a new student, fill in the fields below.</p>
+    <button onclick=addStudent(event)>Add Student</button>
+    <br/>
+    <input id="first_name" placeholder="First"  value=""/>
+    <input id="last_name" placeholder="Last" value=""/>
+    <input id="image" placeholder="Image" value=""/>
+    <input id="email" placeholder="Email" value=""/>
+    <input id="major" placeholder="Major" value=""/>
+    <input id="gpa" placeholder="GPA" value=""/>
+    <br>
+    <p>To edit fill in the changes to be made above (not all fields are required) and pass the DB Id below.</p>
+    <button onclick= editStudent(event)>Edit Student</button>
+    <input id="id" placeholder="ID" value=""/>
+    <hr/>
 
-    <button> Add Student</button>
-    <div id="content"></div>
 
     <button onclick= getStudent(event)>Search</button>
+
+    <div id="content"></div>
+
+    <div id="singleView">
+        <button onclick=hidePopup(event)>x</button>
+    </div>
 
     <script src='scripts.js'></script>
 </body>
