@@ -35,6 +35,7 @@ const addStudent = (request, response) => {
             throw error;
         }
         response.status(200).json(results.rows);
+        
         // response.status(200).send(`Student added with first_name: ${first_name}, last_name: ${last_name}, image: ${image}, email: ${email}, major: ${major}, gpa: ${gpa}`,);
     });
 }
@@ -43,16 +44,17 @@ const addStudent = (request, response) => {
 const updateStudentById = (request, response) => {
     const { first_name, last_name, image, email, major, gpa} = request.body;
     const id = parseInt(request.params.id);
-
+    
     pool.query(`
-    UPDATE students SET first_name = $1, last_name = $2, image = $3, email = $4, major = $5, gpa = $6 WHERE id = $7
-    Returning *`,
-    [first_name, last_name, image, email, major, gpa], 
+    UPDATE students SET first_name = $1, last_name = $2, image = $3, email = $4, major = $5, gpa = $6 WHERE id = $7 RETURNING *`,
+    [first_name, last_name, image, email, major, gpa, id], 
     (error, results) => {
         if (error){
+            console.log(`People with id: ${id} update.`)
             throw error;
         }
         response.status(200).send(`People with id: ${id} update.`);
+
         // response.status(200).send(`Student added with first_name: ${first_name}, last_name: ${last_name}, image: ${image}, email: ${email}, major: ${major}, gpa: ${gpa}`,);
     });
 }

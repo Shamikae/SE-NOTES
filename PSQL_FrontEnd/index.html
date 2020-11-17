@@ -19,18 +19,18 @@
     <input id="major" placeholder="Major" value=""/>
     <input id="gpa" placeholder="GPA" value=""/>
     <br>
-    <p>To edit fill in the changes to be made above (not all fields are required) and pass the DB Id below.</p>
+
+    <p>To edit fill in the changes to be made above (all fields are required) and pass the DB Id below.</p>
     <button onclick= editStudent(event)>Edit Student</button>
     <input id="id" placeholder="ID" value=""/>
     <hr/>
-
 
     <button onclick= getStudent(event)>Search</button>
 
     <div id="content"></div>
 
     <div id="singleView">
-        <button onclick=hidePopup(event)>x</button>
+        <button id="closeButton" onclick=hidePopup(event)>x</button>
     </div>
 
     <script src='scripts.js'></script>

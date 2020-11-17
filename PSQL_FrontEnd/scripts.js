@@ -1,7 +1,6 @@
 const content = document.getElementById('content');
 const singleView = document.getElementById('singleView');
 
-
 function addStudent(e){
     let student = {
         first_name: document.getElementById('first_name').value,
@@ -19,7 +18,7 @@ function addStudent(e){
         body:JSON.stringify(student)
     })
     .then(res => res.json())
-    .then(student)
+    .then(console.log(student))
     .catch(error => console.log(error))
 }
 
@@ -37,7 +36,7 @@ function getStudent(){
 
             card.setAttribute('id', student.id)
             card.setAttribute('class', 'card');
-            card.setAttribute('style', `background-image: url(${student.image || ''})`)
+            card.setAttribute('style', `background-image: url(${student.image || ''})`);
             buttons.setAttribute('class', 'studentButtonContainer');
             delButton.setAttribute('class', 'button');
             viewButton.setAttribute('class', 'button');
@@ -65,14 +64,14 @@ function getStudent(){
 function deleteStudentById(event){
     // console.log(event.target.parentNode.id);
 
-    fetch(`http://localhost:3000/students/${event.target.parentNode.parentNode.id}`, {method: 'DELETE', 
-headers: {
+    fetch(`http://localhost:3000/students/${event.target.parentNode.parentNode.id}`, {
+        method: 'DELETE',
+        headers: {
     'Content-type': 'application/json'
 }})
     .then(getStudent)
     .catch(error => console.log(error))
 }
-
 
 function viewStudentById(event){
     singleView.innerHTML = '<button id="closeButton" onclick=hidePopup(event)>x</button>';
@@ -98,7 +97,6 @@ function viewStudentById(event){
         major.innerText = `${student[0].major}`
         gpa.innerText = `${student[0].gpa}`
         
-
         singleView.appendChild(first_name);
         singleView.appendChild(last_name);
         singleView.appendChild(image);
@@ -106,28 +104,35 @@ function viewStudentById(event){
         singleView.appendChild(major);
         singleView.appendChild(gpa);
         
-
         // content.appendChild(singleView);
         
     })
     .catch(error => console.log(error))
 }
 
-function editStudent(){
+function editStudent() {
     let id = document.getElementById('id').value;
-    
+    let student = {
+        first_name: document.getElementById('first_name').value,
+        last_name: document.getElementById('last_name').value,
+        image: document.getElementById('image').value,
+        email: document.getElementById('email').value,
+        major: document.getElementById('major').value,
+        gpa: document.getElementById('gpa').value
+    }
+
     fetch(`http://localhost:3000/students/${id}`, {
         method: 'PUT',
         headers: {
-            'Content-type' : 'application/json'
+            'Content-Type': 'application/json'
         },
         body: JSON.stringify(student)
     })
-    .then(res => res.json())
-    .then(getStudent)
-    .catch(error => console.log(error))
+        .then(res => res.json())
+        .then(getStudent)
+        .catch(error => console.log(error))
 }
 
-function hidePopup(){       
-        singleView.setAttribute('style', 'display: none')    
+function hidePopup() {
+    singleView.setAttribute('style', 'display: none')
 }
