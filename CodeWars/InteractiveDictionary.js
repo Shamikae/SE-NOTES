@@ -11,5 +11,13 @@
         // Can't find entry for Banana
         class Dictionary {
             constructor() {
-              // your code
+              this.state = {}
             }
+
+            newEntry(key, value) {
+                this.state[key] = value;
+            }
+            look(key) {
+                return this.state[key] ? this.state[key] : `Can't find entry for ${key}`
+            }
+        }
